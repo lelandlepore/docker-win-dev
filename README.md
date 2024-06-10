@@ -1,6 +1,6 @@
 <h1 align="center">Windows<br />
 <div align="center">
-<a href="https://github.com/dockur/windows"><img src="https://github.com/dockur/windows/raw/master/.github/logo.png" title="Logo" style="max-width:100%;" width="128" /></a>
+<a href="https://github.com/lelandlepore/docker-windows-dev"><img src="https://github.com/lelandlepore/docker-windows-dev/raw/master/.github/logo.png" title="Logo" style="max-width:100%;" width="128" /></a>
 </div>
 <div align="center">
 
@@ -31,7 +31,7 @@ Via Docker Compose:
 ```yaml
 services:
   windows:
-    image: dockurr/windows
+    image: lelandlepore/docker-windows-dev
     container_name: windows
     environment:
       VERSION: "win11"
@@ -49,7 +49,7 @@ services:
 Via Docker CLI:
 
 ```bash
-docker run -it --rm -p 8006:8006 --device=/dev/kvm --cap-add NET_ADMIN --stop-timeout 120 dockurr/windows
+docker run -it --rm -p 8006:8006 --device=/dev/kvm --cap-add NET_ADMIN --stop-timeout 120 lelandlepore/docker-windows-dev
 ```
 
 Via Kubernetes:
@@ -107,18 +107,6 @@ kubectl apply -f kubernetes.yml
   | `tiny11`  | Tiny 11                  | 3.8 GB   |
   | `tiny10`  | Tiny 10                  | 3.6 GB   |
 
-  To install ARM64 versions of Windows use [dockur/windows-arm](https://github.com/dockur/windows-arm/).
-
-* ### How do I select the Windows language?
-
-  By default, the English version of Windows will be downloaded. But you can add the `LANGUAGE` environment variable to your compose file, in order to specify an alternative language:
-
-  ```yaml
-  environment:
-    LANGUAGE: "Chinese"
-  ```
-
-  You can choose between `Arabic`, `Bulgarian`, `Chinese`, `Croatian`, `Czech`, `Danish`, `Dutch`, `Estonian`, `Finnish`, `French`, `German`, `Greek`, `Hebrew`, `Hungarian`, `Italian`, `Japanese`, `Korean`, `Latvian`, `Lithuanian`, `Norwegian`, `Polish`, `Portuguese`, `Romanian`, `Russian`, `Serbian`, `Slovak`, `Slovenian`, `Spanish`, `Swedish`, `Turkish`, `Thai` and `Ukrainian`.
 
   If you want to use a keyboard layout or locale that is not the default for your selected language, you can add the `KEYBOARD` and `REGION` variables with a culture code, like this:
 
@@ -339,26 +327,17 @@ kubectl apply -f kubernetes.yml
 
   If you don't receive any error from `kvm-ok` at all, but the container still complains that `/dev/kvm` is missing, it might help to add `privileged: true` to your compose file (or `--privileged` to your `run` command), to rule out any permission issue.
 
-* ### How do I run macOS in a container?
-
-  You can use [dockur/macos](https://github.com/dockur/macos) for that. It shares many of the same features, except for the automatic installation.
-
 * ### Is this project legal?
 
   Yes, this project contains only open-source code and does not distribute any copyrighted material. Any product keys found in the code are just generic placeholders provided by Microsoft for trial purposes. So under all applicable laws, this project will be considered legal.
-
-## Stars
-[![Stars](https://starchart.cc/dockur/windows.svg?variant=adaptive)](https://starchart.cc/dockur/windows)
 
 ## Disclaimer
 
 The product names, logos, brands, and other trademarks referred to within this project are the property of their respective trademark holders. This project is not affiliated, sponsored, or endorsed by Microsoft Corporation.
 
-[build_url]: https://github.com/dockur/windows/
-[hub_url]: https://hub.docker.com/r/dockurr/windows/
-[tag_url]: https://hub.docker.com/r/dockurr/windows/tags
+[build_url]: https://github.com/lelandlepore/docker-windows-dev/
 
-[Build]: https://github.com/dockur/windows/actions/workflows/build.yml/badge.svg
+[Build]: https://github.com/lelandlepore/docker-windows-dev/actions/workflows/build.yml/badge.svg
 [Size]: https://img.shields.io/docker/image-size/dockurr/windows/latest?color=066da5&label=size
-[Pulls]: https://img.shields.io/docker/pulls/dockurr/windows.svg?style=flat&label=pulls&logo=docker
-[Version]: https://img.shields.io/docker/v/dockurr/windows/latest?arch=amd64&sort=semver&color=066da5
+[Pulls]: https://img.shields.io/docker/pulls/lelandlepore/docker-windows-dev.svg?style=flat&label=pulls&logo=docker
+[Version]: https://img.shields.io/docker/v/lelandlepore/docker-windows-dev/latest?arch=amd64&sort=semver&color=066da5
