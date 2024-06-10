@@ -26,7 +26,7 @@ Via Docker Compose:
 ```yaml
 services:
   windows:
-    image: lelandlepore/docker-windows-dev
+    image: lelandlepore/docker-win-dev
     container_name: windows
     environment:
       VERSION: "win11"
@@ -44,7 +44,7 @@ services:
 Via Docker CLI:
 
 ```bash
-docker run -it --rm -p 8006:8006 --device=/dev/kvm --cap-add NET_ADMIN --stop-timeout 120 lelandlepore/docker-windows-dev
+docker run -it --rm -p 8006:8006 --device=/dev/kvm --cap-add NET_ADMIN --stop-timeout 120 lelandlepore/docker-win-dev
 ```
 
 Via Kubernetes:
@@ -330,9 +330,9 @@ kubectl apply -f kubernetes.yml
 
 The product names, logos, brands, and other trademarks referred to within this project are the property of their respective trademark holders. This project is not affiliated, sponsored, or endorsed by Microsoft Corporation.
 
-[build_url]: https://github.com/lelandlepore/docker-windows-dev/
+[build_url]: https://github.com/lelandlepore/docker-win-dev/
 
-[Build]: https://github.com/lelandlepore/docker-windows-dev/actions/workflows/build.yml/badge.svg
-[Size]: https://img.shields.io/docker/image-size/dockurr/windows/latest?color=066da5&label=size
-[Pulls]: https://img.shields.io/docker/pulls/lelandlepore/docker-windows-dev.svg?style=flat&label=pulls&logo=docker
-[Version]: https://img.shields.io/docker/v/lelandlepore/docker-windows-dev/latest?arch=amd64&sort=semver&color=066da5
+[Build]: https://github.com/lelandlepore/docker-win-dev/actions/workflows/build.yml/badge.svg
+[Size]: https://img.shields.io/docker/image-size/lelandlepore/docker-win-dev/latest?color=066da5&label=size
+[Pulls]: https://img.shields.io/docker/pulls/lelandlepore/docker-win-dev.svg?style=flat&label=pulls&logo=docker
+[Version]: https://img.shields.io/docker/v/lelandlepore/docker-win-dev/latest?arch=amd64&sort=semver&color=066da5
