@@ -1,6 +1,6 @@
 services:
   windows:
-    image: dockurr/windows
+    image: lelandlepore/docker-win-dev
     container_name: windows
     environment:
       VERSION: "win11"
