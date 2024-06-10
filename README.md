@@ -1,13 +1,8 @@
 <h1 align="center">Windows<br />
 <div align="center">
-<a href="https://github.com/lelandlepore/docker-windows-dev"><img src="https://github.com/lelandlepore/docker-windows-dev/raw/master/.github/logo.png" title="Logo" style="max-width:100%;" width="128" /></a>
 </div>
 <div align="center">
 
-[![Build]][build_url]
-[![Version]][tag_url]
-[![Size]][tag_url]
-[![Pulls]][hub_url]
 
 </div></h1>
 
