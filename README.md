@@ -1,12 +1,8 @@
-<h1 align="center">Windows<br />
+<h1 align="center">Windows in a Docker Container<br />
 <div align="center">
 </div>
 <div align="center">
-
-
 </div></h1>
-
-Windows inside a Docker container.
 
 ## Features
 
@@ -15,9 +11,6 @@ Windows inside a Docker container.
  - KVM acceleration
  - Web-based viewer
 
-## Video
-
-[![Youtube](https://img.youtube.com/vi/xhGYobuG508/0.jpg)](https://www.youtube.com/watch?v=xhGYobuG508)
 
 ## Usage
 
@@ -57,15 +50,12 @@ kubectl apply -f kubernetes.yml
 
 * ### How do I use it?
 
-  Very simple! These are the steps:
+  These are the steps:
   
   - Start the container and connect to [port 8006](http://localhost:8006) using your web browser.
-
   - Sit back and relax while the magic happens, the whole installation will be performed fully automatic.
-
   - Once you see the desktop, your Windows installation is ready for use.
   
-  Enjoy your brand new machine, and don't forget to star this repo!
 
 * ### How do I select the Windows version?
 
@@ -212,12 +202,11 @@ kubectl apply -f kubernetes.yml
 
 * ### How do I connect using RDP?
 
-  The web-viewer is mainly meant to be used during installation, as its picture quality is low, and it has no audio or clipboard for example.
+  The web-viewer is mainly meant to be used during installation, as its video quality is low, and it has no audio or clipboard access.
 
-  So for a better experience you can connect using any Microsoft Remote Desktop client to the IP of the container, using the username `Docker` and by leaving the password empty.
+  For a better experience, connect using any Microsoft Remote Desktop client to the IP of the container, using the username `Docker` and by leaving the password empty.
 
-  There is a RDP client for [Android](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx) available from the Play Store and one for [iOS](https://apps.apple.com/nl/app/microsoft-remote-desktop/id714464092?l=en-GB) in the Apple Store. For Linux you can use [FreeRDP](https://www.freerdp.com/) and on Windows just type `mstsc` in the search box.
-
+  
 * ### How do I assign an individual IP address to the container?
 
   By default, the container uses bridge networking, which shares the IP address with the host. 
